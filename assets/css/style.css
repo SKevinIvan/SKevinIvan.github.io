@@ -111,7 +111,7 @@ section, #header, .back-to-top {
   width: 240px;
   z-index: 9997;
   padding: 0;
- background: var(--color-sidebar) !important;
+  background: var(--color-sidebar);
   border-right: 1px solid var(--color-border);
   overflow-y: auto;
   transition: all 0.5s;
@@ -255,12 +255,10 @@ section, #header, .back-to-top {
 section {
   padding: 70px 0;
   overflow: hidden;
- background-color: rgba(8, 13, 23, 0.82) !important;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background-color: var(--color-dark);
 }
 
-.section-bg {  background-color: rgba(13, 21, 38, 0.88) !important;}
+.section-bg { background-color: var(--color-dark-2) !important; }
 .section-title { padding-bottom: 30px; }
 
 .section-title h2 {
@@ -725,3 +723,77 @@ section {
 #footer .credits { display: none; }
 
 @media (max-width: 1199px) { #footer { position: static; width: 100%; } }
+
+/*--------------------------------------------------------------
+# GLightbox — tema oscuro coherente con el diseño
+--------------------------------------------------------------*/
+.glightbox-clean .gslide-description {
+  background: var(--color-dark-2) !important;
+  border-top: 1px solid var(--color-border);
+}
+
+.glightbox-clean .gdesc-inner {
+  padding: 14px 20px;
+}
+
+.glightbox-clean .gslide-title {
+  font-family: var(--font-ui) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--color-muted) !important;
+  letter-spacing: 0.04em;
+  margin-bottom: 0 !important;
+}
+
+/* Fondo del overlay */
+.glightbox-clean .goverlay {
+  background: rgba(6, 12, 24, 0.95) !important;
+}
+
+/* Contenedor de la imagen */
+.glightbox-clean .gslide-media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.7);
+}
+
+/* Botones de navegación anterior / siguiente */
+.glightbox-clean .gprev,
+.glightbox-clean .gnext {
+  background: rgba(37, 99, 235, 0.15) !important;
+  border: 1px solid rgba(37, 99, 235, 0.3) !important;
+  border-radius: 50% !important;
+  width: 44px !important;
+  height: 44px !important;
+  transition: all var(--transition);
+}
+
+.glightbox-clean .gprev:hover,
+.glightbox-clean .gnext:hover {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.glightbox-clean .gprev svg path,
+.glightbox-clean .gnext svg path {
+  fill: #fff !important;
+}
+
+/* Botón cerrar */
+.glightbox-clean .gclose {
+  background: rgba(37, 99, 235, 0.15) !important;
+  border: 1px solid rgba(37, 99, 235, 0.3) !important;
+  border-radius: 50% !important;
+  width: 38px !important;
+  height: 38px !important;
+  transition: all var(--transition);
+}
+
+.glightbox-clean .gclose:hover {
+  background: #e05f5f !important;
+  border-color: #e05f5f !important;
+}
+
+.glightbox-clean .gclose svg path {
+  fill: #fff !important;
+}
